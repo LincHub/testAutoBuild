@@ -22,7 +22,7 @@ jobs:
           echo Using default scheme: $default
       - name: Build
         env:
-          scheme: ${{ 'default' }}
+          scheme: autoBuildTest
         run: |
           if [ $scheme = default ]; then scheme=$(cat default); fi
           filetype_parameter="project" && file_to_build="`ls -A | grep -i \\.xcodeproj\$`"; fi
